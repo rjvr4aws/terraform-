@@ -43,7 +43,7 @@ resource "aws_security_group" "ec2_sg" {
 }
 
 resource "aws_instance" "my_ec2" {
-  ami                    = "ami-0c02fb55956c7d316"
+  ami = "ami-0f5ef0a600d428470" # Ubuntu 22.04 LTS in ap-south-1
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
